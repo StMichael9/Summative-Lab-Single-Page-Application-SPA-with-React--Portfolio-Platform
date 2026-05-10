@@ -22,7 +22,7 @@ function App() {
   ]);
 
   function handleAddProject(newProject) {
-    setProjects((prev) => [...prev, newProject]); // Always returns the latest state.
+    setProjects((prev) => [...prev, newProject]);
   }
 
   function handleDeleteProject(id) {
@@ -38,15 +38,13 @@ function App() {
   );
 
   return (
-    <>
-      <LandingPage
-        projects={filteredProjects}
-        query={query}
-        onSearchChange={handleSearchChange}
-        onAddProject={handleAddProject}
-        onDeleteProject={handleDeleteProject}
-      />
-    </>
+    <LandingPage
+      projects={filteredProjects}
+      query={query}
+      onSearchChange={handleSearchChange}
+      onAddProject={handleAddProject}
+      onDeleteProject={handleDeleteProject}
+    />
   );
 }
 
