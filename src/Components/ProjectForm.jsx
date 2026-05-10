@@ -27,7 +27,9 @@ const ProjectForm = ({ onAddProject }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="project-form" onSubmit={handleSubmit}>
+      <h2>Add a project</h2>
+      <div className="project-form-fields">
       <input
         type="text"
         placeholder="Title"
@@ -55,8 +57,10 @@ const ProjectForm = ({ onAddProject }) => {
         value={repo}
         onChange={(e) => setRepo(e.target.value)}
       />
-
+      </div>
+      <div className="project-form-actions">
       <button type="submit">Add Project</button>
+      </div>
     </form>
   );
 };

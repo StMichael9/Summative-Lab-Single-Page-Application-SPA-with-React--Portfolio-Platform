@@ -3,7 +3,7 @@ import App from "../App";
 
 const SearchBar = ({ query, onSearchChange }) => {
   return (
-    <div>
+    <div className="search-bar toolbar">
       <input
         type="Search"
         placeholder="Search projects..."
